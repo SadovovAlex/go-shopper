@@ -9,7 +9,9 @@
     "dev": "node build/server.js",
     "lint": "eslint client/* --ext .js --ext .vue",
     "generate_default_styles": "et -i ./client/styles/element-variables.css",
-    "generate_theme": "et -c ./client/styles/element-variables.css"
+    "generate_theme": "et -c ./client/styles/element-variables.css",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Sadovov A.A.",
   "license": "MIT",
@@ -23,7 +25,8 @@
     "vue-router": "^2.5.2",
     "vuex": "^2.3.1",
     "vuex-router-sync": "^4.1.2",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
@@ -74,5 +77,6 @@
     "webpack": "2.4.1",
     "webpack-dev-middleware": "^1.10.2",
     "webpack-hot-middleware": "^2.18.0"
-  }
+  },
+  "snyk": true
 }
